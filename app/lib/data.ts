@@ -177,6 +177,11 @@ export async function fetchInvoiceById(id: string) {
       amount: invoice.amount / 100,
     }));
 
+    console.log('---------------invoice---------------');
+    console.log('---------------invoice---------------');
+    console.log('---------------invoice---------------');
+    console.log('---------------invoice---------------');
+    console.log(invoice);
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
@@ -205,7 +210,7 @@ export async function fetchCustomers() {
 
 export async function fetchFilteredCustomers(query: string) {
   noStore();
-  
+
   try {
     const data = await sql<CustomersTable>`
 		SELECT
